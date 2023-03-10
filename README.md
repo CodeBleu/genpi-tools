@@ -12,6 +12,8 @@ Required for the tutorial ["**Sakaki's EFI Install Guide**"](https://wiki.gentoo
   * Provides a script (**buildkernel**(8)) to build a (stub EFI) kernel (with integral initramfs) suitable for booting from a USB key on UEFI BIOS PCs. Automatically sets the necessary kernel configuration parameters, including the command line, and signs the resulting kernel if possible (for secure boot). Has a interactive and non-interactive (batch) mode. Manpages for the script and its configuration file (_/etc/buildkernel.conf_) are included.
 * **app-portage/genup** [source](https://github.com/sakaki-/genup)
   * Provides the **genup**(8) script, to simplify the process of keeping your Gentoo system up-to-date. **genup**(8) can automatically update the Portage tree, all installed packages, and kernel. Has interactive and non-interactive (batch) modes. A manpage is included.
+* **app-crypt/staticgpg**
+  * A simple ebuild, derived from **app-crypt/gnupg** version 1.4.23, which creates a statically linked, no-pinentry version of **gpg**(1) suitable for use in an initramfs context. It can safely be installed beside a standard 2.x version of **app-crypt/gnupg** (which isn't SLOTted). Deploys its executable to _/usr/bin/staticgpg_. A placeholder manpage is included.
 * **sys-apps/coreboot-utils** [upstream](https://www.coreboot.org)
   * This package provides a few utilities from the coreboot project, specifically `ifdtool` to parse and modify flash dumps of Intel firmware and (on `amd64` only) `intelmetool` to query the status of the Intel Management Engine.
 * **(eclass/)java-maven-pkg.eclass**
